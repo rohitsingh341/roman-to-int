@@ -24,6 +24,7 @@ public class RomanToInt {
         int sum = 0;
 
         for (int i = 0; i < s.length(); i++) {
+            // First condition in below if statement is for avoiding getting out of bounds exception
             if (i < s.length()-1 && romanToInMap.get(s.charAt(i)) < romanToInMap.get(s.charAt(i+1))) {
                 sum = sum - romanToInMap.get(s.charAt(i));
             }
